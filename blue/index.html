@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RV Wall Mount</title>
+</head>
+<body>
+  <script>
+    var asin = "B0GTWXJ6FR";
+    var fallback = "https://www.amazon.com/dp/" + asin;
+    var appLink = "com.amazon.mobile.shopping.web://www.amazon.com/buying-rules?action=dyn-create-br&source=dpx_ye&asin=" + asin + "&existingRuleRedirectView=edit&existingRuleTerminatedRedirectView=edit&minFormActions=true";
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      var start = Date.now();
+      setTimeout(function() {
+        if (Date.now() - start < 2000) { window.location = fallback; }
+      }, 1500);
+      window.location = appLink;
+    } else {
+      window.location = "https://www.amazon.com/buying-rules?action=dyn-create-br&source=dpx_ye&asin=" + asin + "&existingRuleRedirectView=edit&existingRuleTerminatedRedirectView=edit&minFormActions=true";
+    }
+  </script>
+  <noscript><meta http-equiv="refresh" content="0;url=https://www.amazon.com/dp/B0GTWXJ6FR"></noscript>
+</body>
+</html>
