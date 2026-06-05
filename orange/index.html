@@ -9,7 +9,7 @@
   <script>
     var asin = "B0GFBCP42N";
     var fallback = "https://www.amazon.com/dp/" + asin;
-    var appLink = "com.amazon.mobile.shopping.web://www.amazon.com/buying-rules?action=dyn-create-br&source=dpx_ye&asin=" + asin + "&existingRuleRedirectView=edit&existingRuleTerminatedRedirectView=edit&minFormActions=true";
+    var appLink = "intent://www.amazon.com/buying-rules?action=dyn-create-br&source=dpx_ye&asin=" + asin + "&existingRuleRedirectView=edit&existingRuleTerminatedRedirectView=edit&minFormActions=true#Intent;scheme=https;package=com.amazon.mshop.android.shopping;end";
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (isMobile) {
       var start = Date.now();
